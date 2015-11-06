@@ -270,6 +270,46 @@ public:
 
     void ResetDevice(void);
 
+    NTSTATUS
+        IsSupportedVidPn(
+            IN_CONST_HANDLE                 hAdapter,
+            INOUT_PDXGKARG_ISSUPPORTEDVIDPN pIsSupportedVidPn);
+
+    NTSTATUS
+        RecommendFunctionalVidPn(
+            IN_CONST_HANDLE                                     hAdapter,
+            IN_CONST_PDXGKARG_RECOMMENDFUNCTIONALVIDPN_CONST    pRecommendFunctionalVidPn);
+
+    NTSTATUS
+        EnumVidPnCofuncModality(
+            IN_CONST_HANDLE                                     hAdapter,
+            IN_CONST_PDXGKARG_ENUMVIDPNCOFUNCMODALITY_CONST     pEnumCofuncModality);
+
+    NTSTATUS
+        SetVidPnSourceVisibility(
+            IN_CONST_HANDLE                             hAdapter,
+            IN_CONST_PDXGKARG_SETVIDPNSOURCEVISIBILITY  pSetVidPnSourceVisibility);
+
+    NTSTATUS
+        CommitVidPn(
+            IN_CONST_HANDLE                         hAdapter,
+            IN_CONST_PDXGKARG_COMMITVIDPN_CONST     pCommitVidPn);
+
+    NTSTATUS
+        UpdateActiveVidPnPresentPath(
+            IN_CONST_HANDLE                                         hAdapter,
+            IN_CONST_PDXGKARG_UPDATEACTIVEVIDPNPRESENTPATH_CONST    pUpdateActiveVidPnPresentPath);
+
+    NTSTATUS
+        RecommendMonitorModes(
+            IN_CONST_HANDLE                                 hAdapter,
+            IN_CONST_PDXGKARG_RECOMMENDMONITORMODES_CONST   pRecommendMonitorModes);
+
+    NTSTATUS
+        QueryVidPnHWCapability(
+            IN_CONST_HANDLE                             i_hAdapter,
+            INOUT_PDXGKARG_QUERYVIDPNHWCAPABILITY       io_pVidPnHWCaps);
+
 private:
 
     RosKmAdapter(IN_CONST_PDEVICE_OBJECT PhysicalDeviceObject, OUT_PPVOID MiniportDeviceContext);

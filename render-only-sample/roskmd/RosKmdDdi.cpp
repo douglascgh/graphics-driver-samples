@@ -645,3 +645,99 @@ RosKmdDdi::DdiResetDevice(
     return pRosKmdAdapter->ResetDevice();
 }
 
+NTSTATUS
+RosKmdDdi::DdiIsSupportedVidPn(
+    IN_CONST_HANDLE                 hAdapter,
+    INOUT_PDXGKARG_ISSUPPORTEDVIDPN pIsSupportedVidPn)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->IsSupportedVidPn(hAdapter, pIsSupportedVidPn);
+}
+
+NTSTATUS
+RosKmdDdi::DdiRecommendFunctionalVidPn(
+    IN_CONST_HANDLE                                     hAdapter,
+    IN_CONST_PDXGKARG_RECOMMENDFUNCTIONALVIDPN_CONST    pRecommendFunctionalVidPn)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->RecommendFunctionalVidPn(hAdapter, pRecommendFunctionalVidPn);
+}
+
+NTSTATUS
+RosKmdDdi::DdiEnumVidPnCofuncModality(
+    IN_CONST_HANDLE                                     hAdapter,
+    IN_CONST_PDXGKARG_ENUMVIDPNCOFUNCMODALITY_CONST     pEnumCofuncModality)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->EnumVidPnCofuncModality(hAdapter, pEnumCofuncModality);
+}
+
+NTSTATUS
+RosKmdDdi::DdiSetVidPnSourceVisibility(
+    IN_CONST_HANDLE                             hAdapter,
+    IN_CONST_PDXGKARG_SETVIDPNSOURCEVISIBILITY  pSetVidPnSourceVisibility)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->SetVidPnSourceVisibility(hAdapter, pSetVidPnSourceVisibility);
+}
+
+NTSTATUS
+RosKmdDdi::DdiCommitVidPn(
+    IN_CONST_HANDLE                         hAdapter,
+    IN_CONST_PDXGKARG_COMMITVIDPN_CONST     pCommitVidPn)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->CommitVidPn(hAdapter, pCommitVidPn);
+}
+
+NTSTATUS
+RosKmdDdi::DdiUpdateActiveVidPnPresentPath(
+    IN_CONST_HANDLE                                         hAdapter,
+    IN_CONST_PDXGKARG_UPDATEACTIVEVIDPNPRESENTPATH_CONST    pUpdateActiveVidPnPresentPath)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->UpdateActiveVidPnPresentPath(hAdapter, pUpdateActiveVidPnPresentPath);
+}
+
+NTSTATUS
+RosKmdDdi::DdiRecommendMonitorModes(
+    IN_CONST_HANDLE                                 hAdapter,
+    IN_CONST_PDXGKARG_RECOMMENDMONITORMODES_CONST   pRecommendMonitorModes)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s hAdapter=%lx\n", __FUNCTION__, hAdapter);
+
+    return pRosKmdAdapter->RecommendMonitorModes(hAdapter, pRecommendMonitorModes);
+}
+
+NTSTATUS
+RosKmdDdi::DdiQueryVidPnHWCapability(
+    IN_CONST_HANDLE                             i_hAdapter,
+    INOUT_PDXGKARG_QUERYVIDPNHWCAPABILITY       io_pVidPnHWCaps)
+{
+    RosKmAdapter  *pRosKmdAdapter = RosKmAdapter::Cast(i_hAdapter);
+
+    DbgPrintEx(DPFLTR_IHVVIDEO_ID, DPFLTR_TRACE_LEVEL, "%s i_hAdapter=%lx\n", __FUNCTION__, i_hAdapter);
+
+    return pRosKmdAdapter->QueryVidPnHWCapability(i_hAdapter, io_pVidPnHWCaps);
+}
+

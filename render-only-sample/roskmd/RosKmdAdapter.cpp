@@ -1938,6 +1938,95 @@ RosKmAdapter::ResetDevice(void)
     // Do nothing
 }
 
+
+NTSTATUS
+RosKmAdapter::IsSupportedVidPn(
+    IN_CONST_HANDLE                 hAdapter,
+    INOUT_PDXGKARG_ISSUPPORTEDVIDPN pIsSupportedVidPn)
+{
+    hAdapter;
+    pIsSupportedVidPn;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::RecommendFunctionalVidPn(
+    IN_CONST_HANDLE                                     hAdapter,
+    IN_CONST_PDXGKARG_RECOMMENDFUNCTIONALVIDPN_CONST    pRecommendFunctionalVidPn)
+{
+    hAdapter;
+    pRecommendFunctionalVidPn;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::EnumVidPnCofuncModality(
+    IN_CONST_HANDLE                                     hAdapter,
+    IN_CONST_PDXGKARG_ENUMVIDPNCOFUNCMODALITY_CONST     pEnumCofuncModality)
+{
+    hAdapter;
+    pEnumCofuncModality;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::SetVidPnSourceVisibility(
+    IN_CONST_HANDLE                             hAdapter,
+    IN_CONST_PDXGKARG_SETVIDPNSOURCEVISIBILITY  pSetVidPnSourceVisibility)
+{
+    hAdapter;
+    pSetVidPnSourceVisibility;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::CommitVidPn(
+    IN_CONST_HANDLE                         hAdapter,
+    IN_CONST_PDXGKARG_COMMITVIDPN_CONST     pCommitVidPn)
+{
+    hAdapter;
+    pCommitVidPn;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::UpdateActiveVidPnPresentPath(
+    IN_CONST_HANDLE                                         hAdapter,
+    IN_CONST_PDXGKARG_UPDATEACTIVEVIDPNPRESENTPATH_CONST    pUpdateActiveVidPnPresentPath)
+{
+    hAdapter;
+    pUpdateActiveVidPnPresentPath;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::RecommendMonitorModes(
+    IN_CONST_HANDLE                                 hAdapter,
+    IN_CONST_PDXGKARG_RECOMMENDMONITORMODES_CONST   pRecommendMonitorModes)
+{
+    hAdapter;
+    pRecommendMonitorModes;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
+NTSTATUS
+RosKmAdapter::QueryVidPnHWCapability(
+    IN_CONST_HANDLE                             i_hAdapter,
+    INOUT_PDXGKARG_QUERYVIDPNHWCAPABILITY       io_pVidPnHWCaps)
+{
+    i_hAdapter;
+    io_pVidPnHWCaps;
+
+    return STATUS_NOT_IMPLEMENTED;
+}
+
 void
 RosKmAdapter::PatchDmaBuffer(
     ROSDMABUFINFO*                  pDmaBufInfo,

@@ -265,5 +265,52 @@ public:
         DdiResetDevice(
             IN_CONST_PVOID  MiniportDeviceContext);
 
+    static NTSTATUS
+        __stdcall
+        DdiIsSupportedVidPn(
+            IN_CONST_HANDLE                 hAdapter,
+            INOUT_PDXGKARG_ISSUPPORTEDVIDPN pIsSupportedVidPn);
+
+    static NTSTATUS
+        __stdcall
+        DdiRecommendFunctionalVidPn(
+            IN_CONST_HANDLE                                     hAdapter,
+            IN_CONST_PDXGKARG_RECOMMENDFUNCTIONALVIDPN_CONST    pRecommendFunctionalVidPn);
+
+    static NTSTATUS
+        __stdcall
+        DdiEnumVidPnCofuncModality(
+            IN_CONST_HANDLE                                     hAdapter,
+            IN_CONST_PDXGKARG_ENUMVIDPNCOFUNCMODALITY_CONST     pEnumCofuncModality);
+
+    static NTSTATUS
+        __stdcall
+        DdiSetVidPnSourceVisibility(
+            IN_CONST_HANDLE                             hAdapter,
+            IN_CONST_PDXGKARG_SETVIDPNSOURCEVISIBILITY  pSetVidPnSourceVisibility);
+
+    static NTSTATUS
+        __stdcall
+        DdiCommitVidPn(
+            IN_CONST_HANDLE                         hAdapter,
+            IN_CONST_PDXGKARG_COMMITVIDPN_CONST     pCommitVidPn);
+
+    static NTSTATUS
+        __stdcall
+        DdiUpdateActiveVidPnPresentPath(
+            IN_CONST_HANDLE                                         hAdapter,
+            IN_CONST_PDXGKARG_UPDATEACTIVEVIDPNPRESENTPATH_CONST    pUpdateActiveVidPnPresentPath);
+
+    static NTSTATUS
+        __stdcall
+        DdiRecommendMonitorModes(
+            IN_CONST_HANDLE                                 hAdapter,
+            IN_CONST_PDXGKARG_RECOMMENDMONITORMODES_CONST   pRecommendMonitorModes);
+
+    static NTSTATUS
+        __stdcall
+        DdiQueryVidPnHWCapability(
+            IN_CONST_HANDLE                             i_hAdapter,
+            INOUT_PDXGKARG_QUERYVIDPNHWCAPABILITY       io_pVidPnHWCaps);
 };
 

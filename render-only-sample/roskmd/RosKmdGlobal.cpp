@@ -197,6 +197,18 @@ NTSTATUS RosKmdGlobal::DriverEntry(__in IN DRIVER_OBJECT* pDriverObject, __in IN
     DriverInitializationData.DxgkDdiCalibrateGpuClock = RosKmdDdi::DdiCalibrateGpuClock;
     DriverInitializationData.DxgkDdiSetStablePowerState = RosKmdDdi::DdiSetStablePowerState;
 
+    //
+    // Fill in DDI for vid pin
+    //
+    DriverInitializationData.DxgkDdiIsSupportedVidPn = RosKmdDdi::DdiIsSupportedVidPn;
+    DriverInitializationData.DxgkDdiRecommendFunctionalVidPn = RosKmdDdi::DdiRecommendFunctionalVidPn;
+    DriverInitializationData.DxgkDdiEnumVidPnCofuncModality = RosKmdDdi::DdiEnumVidPnCofuncModality;
+    DriverInitializationData.DxgkDdiSetVidPnSourceVisibility = RosKmdDdi::DdiSetVidPnSourceVisibility;
+    DriverInitializationData.DxgkDdiCommitVidPn = RosKmdDdi::DdiCommitVidPn;
+    DriverInitializationData.DxgkDdiUpdateActiveVidPnPresentPath = RosKmdDdi::DdiUpdateActiveVidPnPresentPath;
+    DriverInitializationData.DxgkDdiRecommendMonitorModes = RosKmdDdi::DdiRecommendMonitorModes;
+    DriverInitializationData.DxgkDdiQueryVidPnHWCapability = RosKmdDdi::DdiQueryVidPnHWCapability;
+
     Status = DxgkInitialize(pDriverObject, pRegistryPath, &DriverInitializationData);
 
     if (!NT_SUCCESS(Status))
