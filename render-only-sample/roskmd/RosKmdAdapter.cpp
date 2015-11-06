@@ -1761,7 +1761,6 @@ RosKmAdapter::ControlInterrupt(
 }
 
 NTSTATUS
-__stdcall
 RosKmAdapter::CollectDbgInfo(
     IN_CONST_PDXGKARG_COLLECTDBGINFO        pCollectDbgInfo)
 {
